@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Capture</title>
+    <style>
+        #camera {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        #canvas {
+            display: none;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button {
+            margin-top: 10px;
+        } 
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+  <body>
+      <h1>Take a Picture</h1>
+      <video id="camera" autoplay playsinline muted></video>
+      <canvas id="canvas"></canvas>
+      <br>
+      <button id="capture-btn">Capture</button>
+  
+      <script src="{{ url_for('static', filename='script.js') }}"></script>
+      <br>
+      <p id="extracted-text"></p>
+  </body>
+</html>
